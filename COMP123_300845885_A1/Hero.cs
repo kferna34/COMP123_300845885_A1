@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace COMP123_300845885_A1
 { /*
     *Author: Krytia Fernandez
-    *Version: 0.0.0.2 == The Hero class works fine now.... finalized Show method, fight method and made some "decorations" == works, but not done yet
+    *Version: 0.0.0.3 == Program class has 2 heros-- one returns true for the fight method and one tht returns false .. everything works fine so far...
     */
     class Hero
     {
