@@ -7,43 +7,30 @@ using System.Threading.Tasks;
 namespace COMP123_300845885_A1
 { /*
     *Author: Krytia Fernandez
-    *Version: 0.0.0.3 == Program class has 2 heros-- one returns true for the fight method and one tht returns false .. everything works fine so far...
+    *Version: 0.0.0.4 ==  everything works fine now.. just touching up to make the code more readable== not done...
     */
     class Hero
     {
 
         //*******************************PRIVATE INSTANCE VAR*******************************************************
-
         int _strength;
-
         int _speed;
-
         int _health;
         string _name;
-
         //******************************PUBLIC PROP//***************************************************************
         public string Name
-
         {
-
             get
-
             {
-
                 return this._name;
 
             }
-
             set
-
             {
-                //Console.WriteLine("_name value set");
+               
                 this._name = value;
-
             }
-
         }
-
         public bool hitAttempt
         {
             get
@@ -95,7 +82,7 @@ namespace COMP123_300845885_A1
             }
         }
 
-
+        
         public Hero(string Name)
 
         {
@@ -107,24 +94,29 @@ namespace COMP123_300845885_A1
         /*
         *<summary>
         * this is a constuctor that takes strength, speed, health as param
-        *assigns the local speedval to the speed prop
+        *</summary>
+        assigns the local speedval to the speed prop
         * assigns the local strengthval to the strength prop
         * assigns the local  healthval to the health prop
-        *</summary>
+        *
         */
         private void _generateAbilities(int strength, int speed, int health)
-
         {
             this.Strength = strength;
             this.Speed = speed;
             this.Health = health;
-
-
         }
+        /*
+       *<summary>
+       * this is a constuctor that refers back to the private prop _hitAttempt-- conditions for bool is here
+       *</summary>
+       * consitions for bool is here
+       *
+       */
         public void Fight(bool hitAttempt)
         {
 
-            // for the condition
+            // condition for the clculation of health after the damage  
             int hit = Strength * 5;
             int health = this.Health - hit;
 
