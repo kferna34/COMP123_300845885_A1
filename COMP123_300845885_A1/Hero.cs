@@ -7,8 +7,12 @@ using System.Threading.Tasks;
 namespace COMP123_300845885_A1
 { /*
     *Author: Krytia Fernandez
-    *Version: 0.0.0.5 ==  Final
-    */
+    * ASSIGNMENT 01--COMP1232016
+    *Student Number: 300845885
+    *Last Modified :June 02,2016
+    *Description: A program made of different methods to implement a Hero class
+    *Version: 0.0.0.6 ==  To be marked
+   */
     class Hero
     {
 
@@ -18,9 +22,9 @@ namespace COMP123_300845885_A1
         int _health;
         string _name;
         //******************************PUBLIC PROP//***************************************************************
-        
 
-          
+
+
         public string Name
         {
             get
@@ -30,11 +34,11 @@ namespace COMP123_300845885_A1
             }
             set
             {
-               
+
                 this._name = value;
             }
         }
-       
+
         public bool hitAttempt
         {
             get
@@ -85,14 +89,14 @@ namespace COMP123_300845885_A1
                 _health = value;
             }
         }
+        // where the name is assigned to the hero class
 
-        
         public Hero(string Name)
 
         {
 
             this._name = Name;
-            //this._generateAbilities(80, 95, 100);
+            this._generateAbilities(80, 95, 100);
 
         }
         /*
@@ -112,7 +116,7 @@ namespace COMP123_300845885_A1
         }
         /*
        *<summary>
-       * this is a constuctor that refers back to the private property _hitAttempt-- conditions for bool is here
+       * this is a constuctor that refers back to the private property _hitAttempt and _hitDamage-- conditions for bool is here
        *</summary>
        * consitions for bool is here
        *
@@ -140,11 +144,21 @@ namespace COMP123_300845885_A1
             }
 
         }
-     
+        /**
+        * <summary>
+        * This method contains what the output will be when the _hitattempt is trueor false
+        *
+        * </summary>
+        * 
+        * @private 
+        * @method _hitAttempt 
+        * @returns {void} 
+        */
+
         private void _hitAttempt(bool hitAttempt)
         {
             int hit = Strength * 5;
-           
+
             if (hitAttempt)
             {
                 Console.WriteLine("****************You have been hit********************");
@@ -157,13 +171,16 @@ namespace COMP123_300845885_A1
 
             }
         }
-        /*
-       *<summary>
-       * this is a constuctor that takes an int for the private property _hitDamage-- 
-       *</summary>
-       * 
-       *
-       */
+        /**
+          * <summary>
+          * This method calculates damage by multiplying the strength value by a number between 1-6 
+          *
+          * </summary>
+          * 
+          * @private
+          * @method _hitDamage 
+          * @return void 
+          */
         private void _hitDamage(int hitDamage)
         {
             int hit = Strength * 5;
