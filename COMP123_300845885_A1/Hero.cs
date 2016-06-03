@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace COMP123_300845885_A1
 { /*
     *Author: Krytia Fernandez
-    *Version: 0.0.0.4 ==  everything works fine now.. just touching up to make the code more readable== not done...
+    *Version: 0.0.0.5 ==  Final
     */
     class Hero
     {
@@ -18,6 +18,9 @@ namespace COMP123_300845885_A1
         int _health;
         string _name;
         //******************************PUBLIC PROP//***************************************************************
+        
+
+          
         public string Name
         {
             get
@@ -31,6 +34,7 @@ namespace COMP123_300845885_A1
                 this._name = value;
             }
         }
+       
         public bool hitAttempt
         {
             get
@@ -88,16 +92,16 @@ namespace COMP123_300845885_A1
         {
 
             this._name = Name;
-            this._generateAbilities(80, 95, 100);
+            //this._generateAbilities(80, 95, 100);
 
         }
         /*
         *<summary>
-        * this is a constuctor that takes strength, speed, health as param
+        * this is a constuctor that takes strength, speed, health as param ==all are int
         *</summary>
-        assigns the local speedval to the speed prop
-        * assigns the local strengthval to the strength prop
-        * assigns the local  healthval to the health prop
+        assigns the local speedval to the speed property
+        * assigns the local strengthval to the strength property
+        * assigns the local  healthval to the health prop property
         *
         */
         private void _generateAbilities(int strength, int speed, int health)
@@ -108,7 +112,7 @@ namespace COMP123_300845885_A1
         }
         /*
        *<summary>
-       * this is a constuctor that refers back to the private prop _hitAttempt-- conditions for bool is here
+       * this is a constuctor that refers back to the private property _hitAttempt-- conditions for bool is here
        *</summary>
        * consitions for bool is here
        *
@@ -117,7 +121,7 @@ namespace COMP123_300845885_A1
         {
 
             // condition for the clculation of health after the damage  
-            int hit = Strength * 5;
+            int hit = Strength * 5; // 
             int health = this.Health - hit;
 
             if (hitAttempt == true)
@@ -128,7 +132,7 @@ namespace COMP123_300845885_A1
 
             else
             {
-                Console.WriteLine(" The hit did not cause damage, showing overall abilities now");
+                Console.WriteLine("*** The hit did not cause damage, showing overall abilities now***");
                 Console.WriteLine("=============================================================");
                 Console.WriteLine("========================");
                 Console.WriteLine("Remaining health {0},Strength:{1},Speed{2} ", Health, this.Strength, this.Speed);
@@ -136,29 +140,43 @@ namespace COMP123_300845885_A1
             }
 
         }
+     
         private void _hitAttempt(bool hitAttempt)
         {
             int hit = Strength * 5;
-            bool attempt = true;
-
-            if (attempt)
+           
+            if (hitAttempt)
             {
                 Console.WriteLine("****************You have been hit********************");
                 Console.WriteLine(" Damaged by {0},  Remaining Health {1} ", hit * 5, Health);
             }
             else
             {
-                Console.WriteLine(" The hit did not cause damage, showing overall abilities now");
+                Console.WriteLine(" ***The hit did not cause damage, showing overall abilities now***");
                 Console.WriteLine("Remaining health {0},Strength:{1},Speed{2} ", this.Health, this.Strength, this.Speed);
 
             }
         }
+        /*
+       *<summary>
+       * this is a constuctor that takes an int for the private property _hitDamage-- 
+       *</summary>
+       * 
+       *
+       */
         private void _hitDamage(int hitDamage)
         {
             int hit = Strength * 5;
             Console.WriteLine(" Damaged by {0},  Remaining Health {1} ", hit * 5, Health - hit);
 
         }
+        /*
+       *<summary>
+       * this is a constuctor that refers to the public property Show()-- displays the information about the Hero
+       *</summary>
+       * 
+       *
+       */
         public void Show()
         {
             Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");

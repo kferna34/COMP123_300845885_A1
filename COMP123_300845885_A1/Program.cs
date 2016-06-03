@@ -33,6 +33,8 @@ namespace COMP123_300845885_A1
             CaptainSeaSharp.Fight(false);
 
 
+            //try asking users to enter name and abilities
+
 
 
 
