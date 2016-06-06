@@ -11,7 +11,7 @@ namespace COMP123_300845885_A1
     *Student Number: 300845885
     *Last Modified :June 02,2016
     *Description: A program made of different methods to implement a Hero class
-    *Version: 0.0.1.0 ==  Initial commit  for Assignment 02 == added the reference and created the subclass: superclass relationship
+    *Version: 0.0.1.1 ==  Assignment 2:  created the properties, methods, and arrays;== not done
    */
     public  class Hero
     {
