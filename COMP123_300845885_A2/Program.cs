@@ -10,6 +10,13 @@ namespace COMP123_300845885_A2
     {
         static void Main(string[] args)
         {
+            SuperHero SuperComp = new SuperHero("Super Comp");
+            SuperComp.Show();
+            SuperComp.Health = 100;
+            SuperComp.Strength = 15;
+            SuperComp.Speed = 25;
+            
+            SuperComp.Fight(true);
         }
     }
 }
