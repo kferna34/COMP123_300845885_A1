@@ -41,6 +41,7 @@ namespace COMP123_300845885_A1
             //Assignment 02
             SuperHero SuperComp = new SuperHero("Super Comp");
             SuperComp.Show();
+            SuperComp.ShowPowers();
             SuperComp.Health = 100;
             SuperComp.Strength = 15;
             SuperComp.Speed = 25;
